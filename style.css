@@ -5,7 +5,7 @@ body {
     align-items : center;
     text-align : center;
     height : 100vh;
-    background-color : black;
+    background-color : white;
     color : orange;
 }
 .container {
@@ -37,8 +37,8 @@ body {
     top: 20%; /* 調整位置 */
     left: 50%;
     transform: translate(-50%, -50%);
-    color: red;
-    font-size: 30px;
+    color: black;
+    font-size: 50px;
     font-weight: bold;
 
 }
@@ -49,3 +49,39 @@ body {
     height: auto;  /* 保持圖片比例 */
 }
 
+.bug {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    animation: crawl 20s linear infinite alternate; /* 爬行動畫 */
+    mix-blend-mode: multiply;
+}
+
+/* 爬行動畫 */
+@keyframes crawl {
+    0% {
+        top: 10%;
+        left: 10%;
+        transform: rotate(0deg);
+    }
+    25% {
+        top: 20%;
+        left: 60%;
+        transform: rotate(30deg);
+    }
+    50% {
+        top: 50%;
+        left: 80%;
+        transform: rotate(-20deg);
+    }
+    75% {
+        top: 70%;
+        left: 30%;
+        transform: rotate(45deg);
+    }
+    100% {
+        top: 90%;
+        left: 90%;
+        transform: rotate(0deg);
+    }
+}
